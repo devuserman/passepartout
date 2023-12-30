@@ -1,0 +1,25 @@
+.slider {
+  width: 100%; /* Позволяет слайдеру заполнять контейнер */
+  height: 100%; /* Высота слайдера соответствует высоте контейнера */
+  position: relative; /* Для позиционирования */
+  overflow: hidden; /* Скрывает любую часть изображения, выходящую за пределы */
+}
+
+.slider img {
+  width: 100%; /* Изображение заполняет слайдер */
+  height: 100%; /* Сохраняет пропорции изображения */
+  object-fit: cover; /* Обеспечивает покрытие без искажений */
+  border: 4px solid rgba(96, 108, 118);
+  border-radius: 7px 7px;
+}
+
+@media screen and (max-width: 992px){
+  
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+

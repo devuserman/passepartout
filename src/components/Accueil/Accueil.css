@@ -1,0 +1,301 @@
+.link-container {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+ }
+ .contact-link {
+  text-decoration: none;
+ }
+ .phone-box {
+  width: 400px;
+  border: 1px solid transparent;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+  border-radius: 50px 50px;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ text-align: center;
+ transition: transform 0.3s ease;
+ cursor: pointer;
+  }
+.phone-box:hover {
+  transform: scale(1.2);
+  } 
+  .link-container .phone-box .contact-link {
+    font-size: 20px;
+    color:azure;
+    font-family: Merriweather;
+  }
+  .text-box {
+    color: azure;
+    cursor: pointer;
+  font-size: 20px;
+  margin: 0;
+  font-family: Merriweather;
+  text-decoration: none;
+  }
+  
+
+  /*Section des texte*/
+
+  .section-text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки с равной шириной */
+    gap: 20px;
+    text-align: center;
+    margin: 150px auto;
+}
+
+.haut-box {
+    display: flex;
+    justify-content: center;
+}
+
+.box-1 {
+    width: 100%; /* Полная ширина внутри haut-box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px; /* Минимальная высота, измените в соответствии с вашими нуждами */
+}
+
+.image-temps {
+    margin-top: 10px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.texte-temps {
+    flex-grow: 1;
+    background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+    border: 1px solid transparent;
+    border-radius: 30%;
+    color: azure;
+    padding: 40px;
+    font-family: Merriweather;
+    font-size: 18px;
+    overflow: auto; /* Добавление прокрутки, если текст не помещается */
+}
+
+ 
+ .text-vtc {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Делает текст прозрачным, показывая фон */
+  }
+  
+  /* Дополнительно, чтобы убедиться, что это работает во всех браузерах */
+  .text-vtc::selection {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /*SlideShow*/
+.body-centre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  align-items: center;
+  text-align: center;
+}
+  .imageContainer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .singleSlideContainer {
+    flex: 1 1 30%; 
+    margin: 5px;
+    height: 300px; 
+  }
+  
+  /* Стили для большого слайда, занимающего всю ширину */
+  .singleSlideContainer.full-width {
+    flex-basis: 90%; 
+    max-width: 90%; 
+    height: 500px; 
+  }
+ 
+
+  /* Section-text2 */
+
+  .section-texte-2 {
+width: 100%;
+margin: 100px auto;
+
+  }
+  .box-2 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 40px;
+
+
+  }
+  .image-tarifs {
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 50px 50px;
+    margin-bottom: 30px;
+  } 
+  .titre-tarif {
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Делает текст прозрачным, показывая фон */
+  }
+  
+  /* Дополнительно, чтобы убедиться, что это работает во всех браузерах */
+  .titre-tarif::selection {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .text-tarif {
+    background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+    border: 1px solid transparent;
+    border-radius: 30%;
+    color: azure;
+    padding: 50px;
+    font-family: Merriweather;
+    font-size: 20px;
+  }
+
+
+/*Chema Logo*/
+
+.chema-box {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  margin: 150px 0;
+  width: 100%; 
+  height: 100px; 
+}
+
+.chema-box::before,
+.chema-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.chema-box::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+}
+
+.chema-box::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
+}
+
+.chema-logo {
+  width: 700px; 
+  height: 100px; 
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+
+.box-form {
+margin: auto;
+display: flex;
+justify-content: space-around;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: 80px;
+padding: 0;
+margin-bottom: 50px;
+}
+
+
+.google-review-button {
+  border: 1px solid;
+  border-radius: 50px;
+  background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b); 
+  padding: 10px;
+  text-decoration: none;
+  font-family: Merriweather;
+  font-size: 20px;
+ color: azure;
+}
+
+
+@media screen and (max-width: 1024px){
+  .link-container  {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .phone-box {
+    width: 90%;
+    margin-bottom: 20px;
+   }
+  .box-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .texte-temps {
+    height: auto;
+  }
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+.link-container .phone-box .contact-link {
+  font-size: 18px;
+}
+.text-box {
+  font-size: 18px;
+}
+.texte-temps {
+  font-size: 16px;
+}
+.text-vtc {
+  font-size: 25px;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.text-tarif {
+  font-size: 16px;
+}
+.google-review-button {
+  font-size: 18px;
+}
+}

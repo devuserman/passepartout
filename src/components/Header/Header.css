@@ -1,0 +1,106 @@
+header {
+  width: 100%;
+}
+.logo-container {
+position: relative;
+}
+.logo {
+width: 100%;
+  height: auto;
+  border-radius: 100% 0% 100% 0% / 0% 80% 20% 100% ;
+}
+.contact-icons {
+  position: fixed;
+  position: absolute;
+  right: 0; /* Выравниваем с правой стороны */
+  top: 850px; /* Позиция сверху, можно изменить в зависимости от нужного расположения */
+  display: flex;
+  padding: 20px;
+}
+
+.flag-icon {
+  
+  cursor: pointer;
+  margin: 0 20px;
+}
+  
+
+.burger-menu {
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+.menu-dropdown {
+  position: absolute;
+  right: 5px; /* или другое значение */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0; /* Сначала скрываем меню */
+  transform: translateY(-10px); /* Смещаем меню вверх */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 0.3s forwards; /* Используем анимацию fadeIn */
+}
+
+
+/* Ключевые кадры для анимации появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-dropdown.show {
+  opacity: 1;
+  transform: translateY(0); /* Возвращаем меню на место */
+ 
+}
+
+  .menu-dropdown a {
+    font-size: 23px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  transition: background-color 0.5s;
+  white-space: nowrap;
+  }
+  
+ 
+ 
+  
+  
+  @media screen and (max-width: 1024px) {
+  
+    .contact-icons  {
+      top: 550px ;
+    }
+
+   
+   }
+
+   @media screen and (max-width: 768px) {
+    .contact-icons  {
+      top: 450px ;
+      padding: 0;
+    }
+    .menu-dropdown{
+      right: 0;
+      padding: 0px;
+    }
+    .menu-dropdown a  {
+      font-size: 18px;
+    }
+    .burger-menu {
+      right: 20px;
+    }
+   }
