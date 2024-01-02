@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden; /* Скроет горизонтальную прокрутку */
 }
 
 .App-logo {
@@ -63,8 +64,5 @@
 }
 
 @media screen and (max-width: 768px) {
-  .faWhatsapp,
-.faPhone {
-  font-size: 20px;
-}
+
 }

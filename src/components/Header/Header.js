@@ -45,6 +45,10 @@ const Header = () => {
         <Flag code="US" height="25" className="flag-icon" onClick={() => changeLanguage('en')} />
         <Flag code="FR" height="25" className="flag-icon" onClick={() => changeLanguage('fr')} />
       </div>
+      <div className="contact-icons2">
+        <Flag code="US" height="15" className="flag-icon" onClick={() => changeLanguage('en')} />
+        <Flag code="FR" height="15" className="flag-icon" onClick={() => changeLanguage('fr')} />
+      </div>
       
     </header>
   );

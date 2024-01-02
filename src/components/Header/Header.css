@@ -1,21 +1,20 @@
-header {
+.logo-container {
   width: 100%;
 }
-.logo-container {
-position: relative;
-}
 .logo {
+max-width: 100%;
 width: 100%;
+margin: 0 auto;
   height: auto;
   border-radius: 100% 0% 100% 0% / 0% 80% 20% 100% ;
 }
 .contact-icons {
-  position: fixed;
-  position: absolute;
-  right: 0; /* Выравниваем с правой стороны */
-  top: 850px; /* Позиция сверху, можно изменить в зависимости от нужного расположения */
-  display: flex;
+ display: flex;
   padding: 20px;
+  float: right;
+}
+.contact-icons2 {
+  display: none;
 }
 
 .flag-icon {
@@ -34,7 +33,7 @@ width: 100%;
   right: 50px;
 }
 .menu-dropdown {
-  position: absolute;
+  
   right: 5px; /* или другое значение */
   color: #fff;
   display: flex;
@@ -81,17 +80,24 @@ width: 100%;
   
   @media screen and (max-width: 1024px) {
   
-    .contact-icons  {
-      top: 550px ;
-    }
-
+  .contact-icons2 {
+    display: none;
+  }
    
    }
 
    @media screen and (max-width: 768px) {
+    
     .contact-icons  {
-      top: 450px ;
-      padding: 0;
+      
+      display: none;
+    }
+    .contact-icons2 {
+      display: contents;
+      display: flex;
+  padding: 20px;
+  float: right;
+      right: 0;
     }
     .menu-dropdown{
       right: 0;
@@ -101,6 +107,11 @@ width: 100%;
       font-size: 18px;
     }
     .burger-menu {
+      font-size: 20px;
       right: 20px;
+      top: 20px;
+    }
+    .contact-icons {
+      float: right;
     }
    }

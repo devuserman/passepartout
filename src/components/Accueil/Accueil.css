@@ -217,22 +217,12 @@ padding: 40px;
   border-radius: 50%;
   z-index: 1;
 }
-
-
-
 .box-form {
-margin: auto;
-display: flex;
-justify-content: space-around;
-justify-content: center;
-align-items: center;
-text-align: center;
-gap: 80px;
-padding: 0;
 margin-bottom: 50px;
 }
-
-
+.contact-form {
+  margin-top: 50px;
+}
 .google-review-button {
   border: 1px solid;
   border-radius: 50px;

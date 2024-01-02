@@ -105,6 +105,7 @@ return (
       <CarteMaps />
       </div>
       <div className="contact-form">
+      <img src="/images/reservation.png" alt="" className="image-temps" />
       <ContactForm />
       </div>
       </div>

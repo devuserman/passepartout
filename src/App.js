@@ -21,7 +21,7 @@ function App() {
   href="https://wa.me/33642985037" 
   target="_blank" 
   rel="noopener noreferrer"
-  aria-label="Ссылка на WhatsApp">
+  aria-label="Lien sur WhatsApp">
  <FontAwesomeIcon icon={faWhatsapp} size="3x" color="green" />
 </a>
 <a className="icon-fixed phone" href="tel:+33642985037" aria-label="Appel +33 6 42 98 50 37">
