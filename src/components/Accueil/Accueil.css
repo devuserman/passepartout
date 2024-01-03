@@ -218,9 +218,16 @@ padding: 40px;
   z-index: 1;
 }
 .box-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+
 margin-bottom: 50px;
 }
 .contact-form {
+  width: 50%;
   margin-top: 50px;
 }
 .google-review-button {
@@ -233,19 +240,19 @@ margin-bottom: 50px;
   font-size: 20px;
  color: azure;
 }
+.carte-maps {
+  width: 80%;
+  
+}
 
 
 @media screen and (max-width: 1024px){
   .link-container  {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  margin-top: 100px;
   }
   .phone-box {
-    width: 90%;
+    width: 25%;
+    padding: 10px;
     margin-bottom: 20px;
    }
   .box-form {
@@ -262,15 +269,49 @@ margin-bottom: 50px;
     align-items: center;
     margin: 20px 20px;
   }
+  .chema-box::before  {
+    display: none;
+  }
+  .chema-box::after {
+    display: none;
+  }
+  .link-container .phone-box .contact-link {
+    font-size: 18px;
+  }
+  .text-box {
+    font-size: 18px;
+  }
+  .image-temps {
+    width: 60px;
+  }
+  .chema-logo {
+width: 800px;
+height: 100px;
+  }
+  .chema-box {
+    margin-top: 80px;
+  }
 }
 
 
 @media screen and (max-width: 768px) {
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .phone-box {
+    width: 80%;
+}
+  
 .link-container .phone-box .contact-link {
-  font-size: 18px;
+  font-size: 16px;
 }
 .text-box {
-  font-size: 18px;
+  font-size: 16px;
 }
 .texte-temps {
   font-size: 16px;
@@ -281,6 +322,8 @@ margin-bottom: 50px;
 .imageContainer {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center;
 }
 .text-tarif {
   font-size: 16px;
@@ -288,4 +331,12 @@ margin-bottom: 50px;
 .google-review-button {
   font-size: 18px;
 }
+.singleSlideContainer {
+  height: 300px; /* Или другая желаемая высота */
+}
+.singleSlideContainer.full-width {
+  flex-basis: 90%; /* Занимает весь доступный простор */
+  max-width: 100%; /* Ограничивает максимальную ширину */
+}
+
 }

@@ -9,7 +9,7 @@ function Contact () {
       <>
         <Header />
         <section className="box-contact">
-        <div className="container">
+        <div className="container-carte">
       <CarteMaps />
         </div>
         <div className="form-container">

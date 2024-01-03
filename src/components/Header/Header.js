@@ -31,7 +31,9 @@ const Header = () => {
       </div>
 
       <div className="burger-menu" onMouseEnter={openMenu}>
-        <FaBars />
+  <div className="burger-icon">
+    <FaBars />
+  </div>
 
         {menuOpen && (
           <div className={`menu-dropdown ${menuOpen ? 'show' : ''}`} onMouseLeave={closeMenu}>

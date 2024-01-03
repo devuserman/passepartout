@@ -1,5 +1,5 @@
 .logo-container {
-  width: 100%;
+  max-width: 100%;
 }
 .logo {
 max-width: 100%;
@@ -8,110 +8,120 @@ margin: 0 auto;
   height: auto;
   border-radius: 100% 0% 100% 0% / 0% 80% 20% 100% ;
 }
-.contact-icons {
- display: flex;
-  padding: 20px;
-  float: right;
-}
-.contact-icons2 {
-  display: none;
-}
-
-.flag-icon {
-  
-  cursor: pointer;
-  margin: 0 20px;
-}
-  
-
-.burger-menu {
-  font-size: 40px;
-  cursor: pointer;
-  color: #fff;
+.burger-icon {
   position: absolute;
-  top: 50px;
-  right: 50px;
+  color:azure;
+  top: 40px; /* Расстояние от верхнего края экрана */
+  right: 40px; /* Расстояние от правого края экрана */
+  font-size: 40px; /* Размер иконки */
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-menu {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  top: 10px;
+  right: 20px;
+
 }
 .menu-dropdown {
-  
-  right: 5px; /* или другое значение */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  opacity: 0; /* Сначала скрываем меню */
-  transform: translateY(-10px); /* Смещаем меню вверх */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  animation: fadeIn 0.3s forwards; /* Используем анимацию fadeIn */
-}
-
-
-/* Ключевые кадры для анимации появления */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  position: absolute; /* Фиксированное позиционирование */
+  top: 80px; /* Расположение ниже иконки меню */
+  right: 50px; /* Согласовано с .burger-menu */
+  width: 200px; 
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
 }
 
 .menu-dropdown.show {
   opacity: 1;
-  transform: translateY(0); /* Возвращаем меню на место */
- 
+  visibility: visible;
+  transform: translateY(0);
+  background-color: transparent;
 }
 
-  .menu-dropdown a {
-    font-size: 23px;
-  color: #fff;
+.menu-dropdown a {
+  color: white;
+  font-size: 20px;
   text-decoration: none;
-  padding: 5px;
-  transition: background-color 0.5s;
+  padding: 10px 15px;
+  display: block;
   white-space: nowrap;
-  }
-  
- 
- 
-  
-  
+}
+
+
+.flag-icon {
+  cursor: pointer;
+  margin: 0 20px;
+}
+.contact-icons {
+  display: flex;
+   padding: 20px;
+   float: right;
+ }
+ .contact-icons2 {
+   display: none;
+ }
+
+
+
   @media screen and (max-width: 1024px) {
-  
   .contact-icons2 {
     display: none;
   }
-   
+  .contact-icons  {
+    display: none;
+   }
+   .contact-icons2 {
+  display: contents;
+   display: flex;
+   padding: 20px;
+   float: right;
+   right: 0;
+   }
+   .burger-icon {
+     font-size: 30px;
+   }
+   .menu-dropdown a{
+    font-size: 18px;
+    padding: 0;
+   }
+   .menu-dropdown  {
+    right: 10px;
+    top: 90px;
+   }
    }
 
    @media screen and (max-width: 768px) {
     
-    .contact-icons  {
-      
-      display: none;
+    .burger-icon {
+      font-size: 25px;
     }
-    .contact-icons2 {
-      display: contents;
-      display: flex;
-  padding: 20px;
-  float: right;
-      right: 0;
-    }
-    .menu-dropdown{
-      right: 0;
-      padding: 0px;
-    }
-    .menu-dropdown a  {
-      font-size: 18px;
-    }
-    .burger-menu {
-      font-size: 20px;
-      right: 20px;
+    .menu-dropdown a{
+      font-size: 16px;
+      padding: 0;
+     }
+     .menu-dropdown  {
+      right: 0px;
+      top: 80px;
+     }
+
+   }
+
+   @media screen and (max-width: 425px) {
+    .burger-icon {
       top: 20px;
+      right: 20px;
     }
-    .contact-icons {
-      float: right;
-    }
+    .menu-dropdown a{
+      font-size: 12px;
+      padding: 0;
+     }
+     .menu-dropdown  {
+      right: -30px;
+      top: 50px;
+     }
    }

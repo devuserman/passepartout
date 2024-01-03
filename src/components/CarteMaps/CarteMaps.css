@@ -1,8 +1,8 @@
  .map-container iframe  {
     position: relative;
-    width: 80%; /* Largeur de la carte */
+    width: 100%; /* Largeur de la carte */
     max-width: 100%; /* Largeur maximale pour la responsivité */
-    height: 650px; /* Hauteur de la carte */
+    height: 800px; /* Hauteur de la carte */
     overflow: hidden;
   }
   
