@@ -5,11 +5,22 @@ import React, { useState } from 'react';
 import Flag from 'react-world-flags';
 import { FaBars } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navigateToTarifs = (e) => {
+    // Проверяем, находимся ли мы на странице Accueil
+    if (!location.pathname.includes('Accueil')) {
+      e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+      navigate('/#target-header'); // Перенаправляем и добавляем якорь
+    }
+    // Если уже на Accueil, ничего не делаем, позволяя браузеру обработать якорь
+  };
   
   const openMenu = () => {
     setMenuOpen(true);
@@ -39,7 +50,7 @@ const Header = () => {
           <div className={`menu-dropdown ${menuOpen ? 'show' : ''}`} onMouseLeave={closeMenu}>
             <Link to="/" onClick={closeMenu}>{t('header.home')}</Link>
             <Link to="/Contact" onClick={closeMenu}>{t('header.bookYourRide')}</Link>
-            <a href="#target-header" onClick={closeMenu}>{t('header.ourRates')}</a>
+            <a href="#target-header" onClick={(e) => navigateToTarifs(e)}>{t('header.ourRates')}</a>
           </div>
         )}
       </div>

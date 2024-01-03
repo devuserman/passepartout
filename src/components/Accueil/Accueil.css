@@ -2,12 +2,14 @@
   width: 100%;
   margin-top: 200px;
   display: flex;
+  justify-content: center;
+    align-items:center;
+    text-align: center;
   justify-content: space-around;
- }
- .contact-link {
+}
+
+.contact-link, .text-box {
   text-decoration: none;
- }
- .phone-box {
   width: 400px;
   border: 1px solid transparent;
   padding: 20px;
@@ -15,28 +17,27 @@
   border-radius: 50px 50px;
   display: flex;
   justify-content: center;
- align-items: center;
- text-align: center;
- transition: transform 0.3s ease;
- cursor: pointer;
-  }
-.phone-box:hover {
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-link:hover, .text-box:hover {
   transform: scale(1.2);
-  } 
-  .link-container .phone-box .contact-link {
-    font-size: 20px;
-    color:azure;
-    font-family: Merriweather;
-  }
-  .text-box {
-    color: azure;
-    cursor: pointer;
-  font-size: 20px;
+}
+
+.contact-link .phone-box, .text-box .phone-box {
+  width: 100%; /* Заполняет родительскую ссылку */
   margin: 0;
+}
+
+.contact-link .phone-box, .text-box {
+  font-size: 20px;
+  color: azure;
   font-family: Merriweather;
-  text-decoration: none;
-  }
-  
+}
+
 
   /*Section des texte*/
 
@@ -83,6 +84,10 @@
 
  
  .text-vtc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
     margin-top: 50px;
     font-size: 35px;
     font-family: 'Merriweather', serif;
@@ -212,23 +217,26 @@ padding: 40px;
 }
 
 .chema-logo {
-  width: 700px; 
+  width: 60%; 
   height: 100px; 
   border-radius: 50%;
   z-index: 1;
 }
 .box-form {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content:space-around;
   gap: 50px;
 
 margin-bottom: 50px;
 }
 .contact-form {
-  width: 50%;
-  margin-top: 50px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .google-review-button {
   border: 1px solid;
@@ -241,27 +249,23 @@ margin-bottom: 50px;
  color: azure;
 }
 .carte-maps {
-  width: 80%;
+  width: 50%;
+  margin-top: 100px;
   
 }
 
-
 @media screen and (max-width: 1024px){
   .link-container  {
-  margin-top: 100px;
+   margin-top: 100px;
+   margin-bottom: 100px;
   }
-  .phone-box {
-    width: 25%;
-    padding: 10px;
-    margin-bottom: 20px;
-   }
-  .box-form {
-    display: flex;
-    flex-direction: column;
-  }
-  .texte-temps {
-    height: auto;
-  }
+  .contact-link .phone-box, .text-box {
+  font-size: 18px;
+}
+.contact-link, .text-box {
+  width: 200px;
+  padding: 10px;
+}
   .section-text {
     display: flex;
     flex-direction: column;
@@ -281,49 +285,62 @@ margin-bottom: 50px;
   .text-box {
     font-size: 18px;
   }
+  .text-vtc{
+    font-size: 30px;
+    margin: 20px;
+  }
   .image-temps {
     width: 60px;
   }
   .chema-logo {
-width: 800px;
 height: 100px;
   }
   .chema-box {
     margin-top: 80px;
   }
+.box-form {
+  display: flex;
+  flex-direction: column;
+}
+.image-tarifs {
+  width: 60px;
+}
+.box-2{
+  padding: 20px;
+}
+.carte-maps{
+  margin-top: 50px;
+  width: 90%;
+}
 }
 
 
 @media screen and (max-width: 768px) {
   .link-container {
+    margin: 100px auto 0; /* Центрирует контейнер по горизонтали */
     display: flex;
     flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    gap: 20px;
+    align-items: center; /* Центрирует содержимое по горизонтали */
   }
-  .phone-box {
-    width: 80%;
-}
-  
-.link-container .phone-box .contact-link {
-  font-size: 16px;
-}
-.text-box {
-  font-size: 16px;
-}
+   .contact-link .phone-box, .text-box {
+   font-size: 16px;
+ }
+ .contact-link, .text-box {
+   width: 500px;
+   padding: 10px;
+ }
+
+
 .texte-temps {
   font-size: 16px;
-}
-.text-vtc {
-  font-size: 25px;
 }
 .imageContainer {
   display: flex;
   flex-direction: column;
   align-items: center; /* Выравнивание по центру */
   justify-content: center;
+  padding-top: 0;
 }
 .text-tarif {
   font-size: 16px;
@@ -332,11 +349,64 @@ height: 100px;
   font-size: 18px;
 }
 .singleSlideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   height: 300px; /* Или другая желаемая высота */
 }
-.singleSlideContainer.full-width {
-  flex-basis: 90%; /* Занимает весь доступный простор */
+.singleSlideContainer.full-width .full-height{
+  flex-basis: 100%; /* Занимает весь доступный простор */
   max-width: 100%; /* Ограничивает максимальную ширину */
+  height: 200px;
+}
+.text-vtc {
+  font-size: 25px;
+}
+.chema-box {
+  margin: 80px 0;
+}
+.chema-logo {
+  width: 80%;
+}
+.contact-form {
+  width: 80%;
+}
 }
 
+@media screen and (max-width: 425px) {
+  .singleSlideContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 200px; /* Или другая желаемая высота */
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+  .singleSlideContainer.full-width {
+    flex-basis: 100%; /* Занимает весь доступный простор */
+    max-width: 100%; /* Ограничивает максимальную ширину */
+  }
+  .singleSlideContainer.full-height {
+    height: 200px;
+  }
+  .text-vtc {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  .chema-logo {
+    width: 95%;
+    height: 80px;
+  }
+  .box-2 {
+    padding: 0;
+  }
+  .titre-tarif {
+    font-size: 20px;
+  }
 }

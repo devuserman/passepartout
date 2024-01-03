@@ -49,14 +49,21 @@
     font-style: italic;
 }
 
-@media screen and (max-width: 1024px){
-  
-}
+
 
 
 @media screen and (max-width: 768px) {
+    #reviews-container {
+        margin: 50px 20px;
+    }
     .review .comment {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .review {
+        width: 100%;
     }
 }
 

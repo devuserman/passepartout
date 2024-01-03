@@ -9,7 +9,9 @@
 
 
   @media screen and (max-width: 1024px){
-   
+    .map-container iframe  {
+      height: 400px;
+    }
   }
   
   

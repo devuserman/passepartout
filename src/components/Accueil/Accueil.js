@@ -9,11 +9,22 @@ import CommentSlideshow from '../CommentSlideshow//CommentSlideshow';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n.js';
 import '../locales/fr/translation.json';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Accueil() {
- 
+  const location = useLocation();
   const { t } = useTranslation();
   console.log(i18n.getResourceBundle('fr', 'translation'));
+
+  useEffect(() => {
+    if (location.hash === '#target-header') {
+      const section = document.getElementById('target-header');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
  
   console.log('Key:', 'home.contactUs', 'Translation:', t('home.contactUs'));
@@ -26,27 +37,27 @@ function Accueil() {
   ];
 
 
-  
-  
-
 return (
     <>
   <Header />
   
   <div className="link-container">
-    <div className="phone-box">
-        <a className="contact-link" href="tel:+33642985037">{t('home.contactUs')}</a>
-    </div>
-    <div  className="phone-box">
-    <a href="#target-header" className="text-box">{t('home.tarifOur')}</a>
-
-    </div>
-    <div  className="phone-box">
+    <a className="contact-link" href="tel:+33642985037">
+        <div className="phone-box">
+            {t('home.contactUs')}
+        </div>
+    </a>
+    <a href="#target-header" className="text-box">
+        <div className="phone-box">
+            {t('home.tarifOur')}
+        </div>
+    </a>
     <Link to="/Contact" className="text-box">
-    {t('home.requestAQuote')}
-              </Link>
-      </div>
-      </div>
+        <div className="phone-box">
+            {t('home.requestAQuote')}
+        </div>
+    </Link>
+</div>
 
       <div className="section-text">
         <div className="haut-box">
@@ -73,16 +84,11 @@ return (
       <div className="chema-box">
       <img src="/images/chema_vtc.png" alt="Chema logo" className="chema-logo" />
       </div>
-     
-      <div>
-      <p className="text-vtc">{t('home.reserveYourVTC')}</p>
-</div>
-
-
+     <p className="text-vtc">{t('home.reserveYourVTC')}</p>
   <div className="body-centre">
   <div className="imageContainer">
   {imageSets.map((set, index) => (
-    <div key={index} className={`singleSlideContainer ${index === 3 ? 'full-width' : ''}`}>
+    <div key={index} className={`singleSlideContainer ${index === 3 ? 'full-width' : 'full-height'}`}>
       <SingleSlide images={set} />
     </div>
   ))}
