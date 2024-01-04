@@ -9,6 +9,7 @@ function Contact () {
     return (
       <>
         <Header />
+      
         <section className="box-contact">
         <div className="container-carte">
       <CarteMaps />
