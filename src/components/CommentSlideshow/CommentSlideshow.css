@@ -60,18 +60,32 @@
 
 
 @media screen and (max-width: 768px) {
-   
+    #reviews-container {
+        width: auto;
+        margin: 50px 5px;
+    }
     .review .comment {
-        font-size: 14px;
+        font-size: 12px;
     }
     .review  {
         width: 100%;
     }
+    #reviews-container {
+        width: auto;
+        margin: 50px 5px;
+    }
+    .review .comment {
+        font-size: 14px;
+    }
+    .review .author {
+        font-size: 16px;
+    }
+    .review .date {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 425px){
-    .review {
-        width: 100%;
-    }
+
 }
 

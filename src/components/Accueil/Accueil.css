@@ -130,7 +130,7 @@
   }
   
   /* Стили для большого слайда, занимающего всю ширину */
-  .singleSlideContainer.full-width {
+  .singleSlideContainer.full-width.full-height{
     flex-basis: 100%; 
     max-width: 100%; 
     height: 500px; 
@@ -181,7 +181,10 @@ padding: 40px;
     padding: 50px;
     font-family: Merriweather;
     font-size: 20px;
+    text-align: center; /* Выравнивание текста по горизонтали */
+   
   }
+  
 
 
 /*Chema Logo*/
@@ -231,7 +234,6 @@ padding: 40px;
 margin-bottom: 50px;
 }
 .contact-form {
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,43 +323,70 @@ height: 100px;
 
 @media screen and (max-width: 768px) {
   .link-container {
-    margin: 100px auto 0; /* Центрирует контейнер по горизонтали */
+   width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center; /* Центрирует содержимое по горизонтали */
+    margin-top: 50px;
+    margin-bottom: 30px;
   }
    .contact-link .phone-box, .text-box {
    font-size: 16px;
  }
  .contact-link, .text-box {
-   width: 400px;
+  width: 100%;
+   max-width: 320px;
    padding: 10px;
  }
-
- @media screen and (max-width: 425px) {
-  .contact-link, .text-box {
-    width: 200px;
-  }
- }
-
-
-.texte-temps {
-  font-size: 16px;
+ .lien-comment {
+  width: auto; /* Изменение ширины контейнера */
+}
+.google-review-button {
+  display: block;
+  width: 100%; /* Занимает всю ширину */
+  margin: 0; /* Убираем автоматические отступы */
+  padding: 10px 0; /* Вертикальные отступы */
+  font-size: 14px; /* Меньший размер текста для мобильных устройств */
+}
+.contact-form {
+  width: 100%; /* Делаем изображение на всю ширину экрана */
+  max-width: 300px; /* Ограничиваем максимальную ширину, если нужно */
+  height: auto; /* Поддерживаем пропорции изображения */
+}
+.carte-maps {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+.box-2 {
+width: 100%;
+max-width: 340px;
+margin: 0 auto;
+padding: 0;
+}
+.chema-box {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.section-texte-2 {
+  margin: 30px auto;
+}
+.body-centre {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .imageContainer {
+  width: 100%;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Выравнивание по центру */
+  text-align: center;
   justify-content: center;
   padding-top: 0;
 }
-.text-tarif {
-  font-size: 16px;
-}
-.google-review-button {
-  font-size: 18px;
-}
+
 .singleSlideContainer {
   display: flex;
   justify-content: center;
@@ -365,58 +394,52 @@ height: 100px;
   margin: 0 auto;
   height: 300px; /* Или другая желаемая высота */
 }
-.singleSlideContainer.full-width .full-height{
+.singleSlideContainer.full-width .full-height {
   flex-basis: 100%; /* Занимает весь доступный простор */
   max-width: 100%; /* Ограничивает максимальную ширину */
   height: 200px;
 }
-.text-vtc {
-  font-size: 25px;
-}
-.chema-box {
-  margin: 80px 0;
-}
 .chema-logo {
-  width: 80%;
+  width: 95%;
+  height: 60px;
 }
-.contact-form {
-  width: 80%;
+.text-tarif  {
+  text-align: justify;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.texte-temps {
+  font-size: 14px;
+  text-align: justify;
+  padding: 10px;
+  border-radius: 20px 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.section-text {
+  width: 100%;
+max-width: 340px;
+margin: 0 auto;
+padding: 0;
+}
+.box-1 {
+  margin-top: 35px;
+}
+.text-vtc {
+  font-size: 16px;
+}
+.titre-tarif {
+  font-size: 16px;
 }
 }
 
-@media screen and (max-width: 425px) {
-  .singleSlideContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    height: 200px; /* Или другая желаемая высота */
-  }
-  .imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-  .singleSlideContainer.full-width {
-    flex-basis: 100%; /* Занимает весь доступный простор */
-    max-width: 100%; /* Ограничивает максимальную ширину */
-  }
-  .singleSlideContainer.full-height {
-    height: 200px;
-  }
-  .text-vtc {
-    margin: 5px 0;
-    font-size: 20px;
-  }
-  .chema-logo {
-    width: 95%;
-    height: 80px;
-  }
-  .box-2 {
-    padding: 0;
-  }
-  .titre-tarif {
-    font-size: 20px;
-  }
-}
+
+ @media screen and (max-width: 425px) {
+
+
+
+ }
+  
