@@ -73,7 +73,7 @@ const ContactForm = () => {
     <input type="time" name="heureDepart" />
   </label>
   <label>
-  {t('contact.numberOfPassengersLabel')}
+  {t('contact.numberOfPassengersLabel')} &nbsp;
                 <input type="number" name="nombrePassagers" min="1" required />
             </label>
   <label>

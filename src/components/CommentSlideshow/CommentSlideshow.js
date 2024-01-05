@@ -10,7 +10,7 @@ const CommentSlideshow = () => {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(displayNextReviews, 5000); // 3-4 секунды
+        const intervalId = setInterval(displayNextReviews, 7000); // 3-4 секунды
         return () => clearInterval(intervalId);
     }, []);
 

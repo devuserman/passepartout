@@ -70,7 +70,7 @@
     margin-bottom: 30px;
 }
 
-.texte-temps {
+.texte-temps  {
     flex-grow: 1;
     background: linear-gradient(to right, rgba(96, 108, 118), #ff9a8b);
     border: 1px solid transparent;
@@ -78,8 +78,14 @@
     color: azure;
     padding: 40px;
     font-family: Merriweather;
-    font-size: 18px;
+   
     overflow: auto; /* Добавление прокрутки, если текст не помещается */
+   
+}
+.box-1 p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.3;
 }
 
  
@@ -126,7 +132,7 @@
   .singleSlideContainer {
     flex: 1 1 30%; 
     margin: 5px;
-    height: 300px; 
+    height: 450px; 
   }
   
   /* Стили для большого слайда, занимающего всю ширину */
@@ -151,9 +157,11 @@ justify-content: center;
 align-items: center;
 text-align: center;
 padding: 40px;
-
-
-  }
+}
+.box-2 p {
+  text-align: justify;
+  line-height: 1.3;
+}
   .image-tarifs {
     width: 100px;
     border: 1px solid transparent;
@@ -226,8 +234,12 @@ padding: 40px;
   z-index: 1;
 }
 .box-form {
+  width: 100%;
+  height: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   justify-content:space-around;
   gap: 50px;
 
@@ -252,8 +264,7 @@ margin-bottom: 50px;
 }
 .carte-maps {
   width: 50%;
-  margin-top: 100px;
-  
+  max-height:fit-content;
 }
 
 @media screen and (max-width: 1024px){
@@ -443,6 +454,10 @@ padding: 0;
 }
 .titre-tarif {
   font-size: 16px;
+}
+.box-1 p {
+  font-size: 14px;
+  
 }
 
 }
