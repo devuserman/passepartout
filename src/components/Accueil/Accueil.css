@@ -342,10 +342,20 @@ height: 100px;
  .lien-comment {
   width: auto; /* Изменение ширины контейнера */
 }
+.comment-box {
+  width: auto;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.lien-comment {
+  width: 340px;
+  margin: 0 auto;
+}
 .google-review-button {
-  display: block;
+  display: block; /* Растягиваем кнопку */
   width: 100%; /* Занимает всю ширину */
-  margin: 0; /* Убираем автоматические отступы */
+  margin: 0 auto; /* Убираем автоматические отступы */
   padding: 10px 0; /* Вертикальные отступы */
   font-size: 14px; /* Меньший размер текста для мобильных устройств */
 }
@@ -434,10 +444,12 @@ padding: 0;
 .titre-tarif {
   font-size: 16px;
 }
+
 }
 
 
  @media screen and (max-width: 425px) {
+
 
 
 

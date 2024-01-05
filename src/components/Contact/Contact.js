@@ -15,7 +15,7 @@ function Contact () {
       <CarteMaps />
         </div>
         <div className="form-container">
-        <img src="/images/reservation.png" alt="" className="image-temps" />
+       
             <ContactForm />
           </div>
      

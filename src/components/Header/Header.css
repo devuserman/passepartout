@@ -129,6 +129,7 @@ margin: 0 auto;
       justify-content:flex-end;
       margin-right: 50px;
       font-size: 12px;
+      line-height: 20px;
       padding: 0;
      }
      .menu-dropdown  {
