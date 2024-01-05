@@ -276,8 +276,7 @@ margin-bottom: 50px;
    gap: 15px;
   }
   .contact-link .phone-box, .text-box {
-    
-  font-size: 18px;
+    font-size: 18px;
 }
 .contact-link, .text-box {
  width: 600px;
@@ -328,6 +327,13 @@ height: 100px;
 .carte-maps{
   margin-top: 50px;
   width: 90%;
+}
+.singleSlideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 200px; /* Или другая желаемая высота */
 }
 }
 
@@ -446,9 +452,10 @@ max-width: 340px;
 margin: 0 auto;
 padding: 0;
 }
+/*
 .box-1 {
-  margin-top: 35px;
-}
+
+}*/
 .text-vtc {
   font-size: 16px;
 }

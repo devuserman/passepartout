@@ -65,11 +65,11 @@ const ContactForm = () => {
 
   <h3>{t('contact.reservationDetailsHeading')}</h3>
   <label>
-  {t('contact.departureDateLabel')}
+  {t('contact.departureDateLabel')} &nbsp;
     <input type="date" name="dateDepart" required />
   </label>
   <label>
-  {t('contact.departureTimeLabel')}
+  {t('contact.departureTimeLabel')} &nbsp;
     <input type="time" name="heureDepart" />
   </label>
   <label>
