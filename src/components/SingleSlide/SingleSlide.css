@@ -1,0 +1,24 @@
+.slider {
+  width: 100%; /* Позволяет слайдеру заполнять контейнер */
+  height: 100%; 
+}
+
+.slider img {
+  width: 100%; /* Изображение заполняет слайдер */
+  height: 100%; /* Сохраняет пропорции изображения */
+  object-fit: cover; /* Обеспечивает покрытие без искажений */
+  border-radius: 7px 7px;
+}
+
+@media screen and (max-width: 1024px){
+  
+  
+}
+@media screen and (max-width: 768px) {
+ 
+  .slider img {
+    object-fit: cover; /* Гарантирует, что изображение покроет весь контейнер без искажений */
+  }
+}
+
+
