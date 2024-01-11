@@ -70,12 +70,12 @@ const Header = () => {
         )}
       </div>
       <div className="contact-icons">
-      <img src={`${process.env.PUBLIC_URL}/images/Flag_of_France.webp`} height="25" className="flag-icon" alt="Flag of the United States" onClick={() => changeLanguage('en')} />
-      <img src={`${process.env.PUBLIC_URL}/images/Flag_of_the_United_States.webp`} height="25" className="flag-icon" alt="Flag of France" onClick={() => changeLanguage('fr')} />
+      <img src={`${process.env.PUBLIC_URL}/images/Flag_of_the_United_States.webp`} height="25" className="flag-icon" alt="Flag of the United States" onClick={() => changeLanguage('en')} />
+      <img src={`${process.env.PUBLIC_URL}/images/Flag_of_France.webp`} height="25" className="flag-icon" alt="Flag of France" onClick={() => changeLanguage('fr')} />
       </div>
       <div className="contact-icons2">
-        <img src={`${process.env.PUBLIC_URL}/images/Flag_of_France.webp`} height="15" className="flag-icon" aria-label="Flag of the United States" alt="Flag of the United States" onClick={() => changeLanguage('en')} />
-        <img src={`${process.env.PUBLIC_URL}/images/Flag_of_the_United_States.webp`} height="15" className="flag-icon" aria-label="Flag of France" alt="Flag of France" onClick={() => changeLanguage('fr')} />
+        <img src={`${process.env.PUBLIC_URL}/images/Flag_of_the_United_States.webp`} height="15" className="flag-icon" aria-label="Flag of the United States" alt="Flag of the United States" onClick={() => changeLanguage('en')} />
+        <img src={`${process.env.PUBLIC_URL}/images/Flag_of_France.webp`} height="15" className="flag-icon" aria-label="Flag of France" alt="Flag of France" onClick={() => changeLanguage('fr')} />
       </div>
       
     </header>
