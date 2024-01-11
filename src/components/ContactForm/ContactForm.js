@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ContactForm.css';
+import './ContactForm-min.css';
 import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
@@ -28,7 +28,7 @@ const ContactForm = () => {
   
         if (response.ok) {
           setSubmitted(true);
-          event.target.reset(); // Сброс формы после успешной отправки
+          event.target.reset(); 
         } else {
           throw new Error('Ошибка при отправке формы');
         }
@@ -90,7 +90,7 @@ const ContactForm = () => {
   </label>
 
   <h3>{t('contact.numberVerificationLabel')}</h3>
-  <label class="question-label">
+  <label className="question-label">
   {t('contact.numberVerificationLabel')} {num1} + {num2}? &nbsp;
         <input type="number" name="userAnswer" required />
       </label>

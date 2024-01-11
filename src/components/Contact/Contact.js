@@ -1,4 +1,5 @@
-import './Contact.css'; 
+import { Helmet } from 'react-helmet';
+import './Contact-min.css'; 
 import Header from '../Header/Header';
 import Footer from '../Footer//Footer';
 import ContactForm from '../ContactForm/ContactForm';
@@ -7,7 +8,10 @@ import CommentSlideshow from '../CommentSlideshow//CommentSlideshow';
 
 function Contact () {
     return (
-      <>
+   <>
+      <Helmet>
+        <title>Contactez VTC Privé – Réservez un Taxi à La Rochelle</title>
+      </Helmet>
         <Header />
       
         <section className="box-contact">

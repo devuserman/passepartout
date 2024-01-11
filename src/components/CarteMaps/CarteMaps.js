@@ -1,4 +1,4 @@
-import './CarteMaps.css';
+import './CarteMaps-min.css';
 
 function CarteMaps () {
     return (

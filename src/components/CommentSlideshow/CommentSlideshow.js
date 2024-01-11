@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './CommentSlideshow.css';
+import './CommentSlideshow-min.css';
 import reviews from '../comments.json';
 
 const CommentSlideshow = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './SingleSlide.css';
+import './SingleSlide-min.css';
 
-function SingleSlide({ images }) {
+function SingleSlide({ images, alts }) {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -13,15 +13,17 @@ function SingleSlide({ images }) {
   }, [images]);
 
   const currentImageUrl = images[currentImage];
+  const currentAlt = alts[currentImage];
 
   return (
     <div className="slider">
-      <img src={currentImageUrl} alt={`Slide ${currentImage + 1}`} />
+      <img src={currentImageUrl} alt={currentAlt || `Image ${currentImage + 1}`} />
     </div>
   );
 }
 
 export default SingleSlide;
+
 
 
 

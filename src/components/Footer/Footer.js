@@ -1,7 +1,6 @@
 import React from 'react';
-import './Footer.css';
+import './Footer-min.css';
 import { Link } from 'react-router-dom';
-import Email from './mail_post.png';
 import { useTranslation } from 'react-i18next';
 
 
@@ -12,7 +11,7 @@ export function Footer() {
       <div className="footer-section">
         <div className="footer-logo">
       <p className="text-logo">{t('footer.developedBy')}</p>
-        <img className="logo-dev" src="/images/logo.png" alt="Logo" />
+        <img className="logo-dev" src="/images/logo.webp" alt="Logo developpement" />
         </div>
         </div>
         
@@ -26,10 +25,10 @@ export function Footer() {
 >
 </a>
 
-    <a href="tel:+33642985037">{t('footer.callUs')}</a>
+    <a href="tel:+33642985037" aria-label='Contactez nous lien en bas'>{t('footer.callUs')}</a>
     <a href="mailto:jereservemonvtc@gmail.com" title="Envoyez-nous un mail" className="mail-box">
     {t('footer.contactByEmail')}
-      <img src={Email} alt="Email Icon" className="icon-mail" />
+      <img className="icon-mail" src="/images/mail_post.webp" alt="Email icon" />
     </a>
   </div>
 </div>
