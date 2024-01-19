@@ -10,8 +10,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "follow-redirects": "^1.15.4",
     "helmet": "^7.1.0",
     "i18next": "^23.7.11",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -53,4 +56,3 @@
     "webpack-bundle-analyzer": "^4.10.1"
   }
 }
-
